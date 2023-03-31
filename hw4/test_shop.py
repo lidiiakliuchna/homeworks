@@ -1,11 +1,15 @@
 from unittest import TestCase, mock
 import unittest
 import shop
-from shop import greeting, yes_money, no_money
-class TestVerifyItem(TestCase):
+from shop import *
+class Test1(unittest.TestCase):
+    def not_in_shop(self):
+        self.assertAlmostEqual(all_in_shop(items),answer)
 
-    def test_item_exists(self):
-        self.assertTrue(yes_money('lamp')
+
+    def test_input_value(self):
+        self.assertRaises(TypeError, all_in_shop(), True)
+
 
 
 
