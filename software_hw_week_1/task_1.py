@@ -25,7 +25,7 @@ class Rectangle(Shape):
         perim = self.a * self.b
         print("Consider me implemented", perim)
         return perim
-class Square(Shape):
+class Square( Rectangle):
     def __init__(self, a):
         self.a = a
 
