@@ -11,38 +11,49 @@ def courses():
     print('You are currently on the URL https://codefirstgirls.com/courses')
     print('Where are you clicking? ')
     print('Options: CFGDegree, Back')
-    courses.answer_1 = input()
+    courses.answer = input()
 def degree():
     print('You are currently on the URL https://codefirstgirls.com/courses/cfgdegree')
     print('Where are you clicking? ')
     print('Options: Back')
-    degree.answer_2 = input()
+    degree.answer = input()
 
 def opportunuties():
     print('You are currently on the URL https://codefirstgirls.com/opportunitiess')
     print('Where are you clicking? ')
     print('Options: Ambassadors, Back')
-    opportunuties.answer_3 = input()
+    opportunuties.answer = input()
 
 def ambassadors():
     print('You are currently on the URL https://codefirstgirls.com/opportunities/ambassadors/')
     print('Where are you clicking? ')
     print('Options: Back')
-    ambassadors.answer_4 = input()
+    ambassadors.answer = input()
+while True:
+    if main_menu.answer == 'Courses':
+        courses()
+        if courses.answer == 'CFGDegree':
+            degree()
+            if degree.answer == 'Back':
+                courses()
+            else:
+                break
+        else:
+            main_menu()
+    else:
+        opportunuties()
+        if opportunuties.answer == 'Back':
+            main_menu()
+        else:
+            ambassadors()
+            if ambassadors.answer == 'Back':
+                opportunuties()
+            else:
+                break
 
-if main_menu.answer == 'Courses':
-    courses()
-else:
-    opportunuties()
-if courses.answer_1 =='CFGDegree':
-    degree()
-else:
-    main_menu()
-if degree.answer_2 =='Back':
-    courses()
-if opportunuties.answer_3 =='Ambassadors':
-    ambassadors()
-else:
-    main_menu()
-if ambassadors.answer_4 =='Back':
-    opportunuties()
+
+
+
+
+
+
